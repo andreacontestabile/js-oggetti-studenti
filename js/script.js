@@ -6,7 +6,7 @@ var unoStudente = {
   "nome": "Luca",
   "cognome": "Messina",
   "eta": 23
-}
+};
 
 // Ciclo all'interno dell'oggetto, stampando ognuna delle sue proprietà
 for (var key in unoStudente) {
@@ -51,3 +51,16 @@ for (var i = 0; i < alcuniStudenti.length; i++) {
   var studente = alcuniStudenti[i];
   console.log(studente.nome + " " + studente.cognome);
 }
+
+
+/* 3. Dare la possibilità all’utente attraverso 3 prompt di aggiungere
+un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età. */
+
+ var nuovoStudente = {};
+ nuovoStudente.nome = prompt("Inserire il nome del nuovo studente");
+ nuovoStudente.cognome = prompt("Inserire il cognome del nuovo studente");
+ nuovoStudente.eta = parseInt(prompt("Inserire l'età del nuovo studente"));
+
+ alcuniStudenti.push(nuovoStudente);
+
+ console.log(alcuniStudenti);

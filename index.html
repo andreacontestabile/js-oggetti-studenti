@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>js-oggetti-studenti</title>
   </head>
   <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <h1>Dati degli studenti</h1>
+    <div class="app"></div>
+    <button id="new-student"><i class="fas fa-plus"></i>Aggiungi Studente</button>
+    <script id="student-template" type="text/x-handlebars-template">
+      <div class="student-card">
+        <h2 class="student-heading">{{title}}</h2>
+        <ul class="student-data">
+          <li class="data-item">Nome: <span class="data-value">{{studente.nome}}</span></li>
+          <li class="data-item">Cognome: <span class="data-value">{{studente.cognome}}</span></li>
+          <li class="data-item">Età: <span class="data-value">{{studente.eta}}</span></li>
+        </ul>
+      </div>
+    </script>
+
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
